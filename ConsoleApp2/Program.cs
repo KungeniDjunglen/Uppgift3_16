@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace Uppgift_2._1
 {
@@ -6,21 +6,19 @@ namespace Uppgift_2._1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hur gammla är du?");
-            int age = int.Parse(Console.ReadLine());
-            if (age <= 16)
+            Console.WriteLine("Hur lång är låten du vill spela? ");
+            int minuter = int.Parse(Console.ReadLine());
+            int sekunder = int.Parse(Console.ReadLine());
+            sekunder = sekunder + minuter * 60;
+            if (sekunder >= 165 & sekunder <= 240)
             {
-                Console.WriteLine("Du är för ung");
-            }
-            else if (age >= 16 & age <= 20)
-            {
-                Console.WriteLine("Du är i rätt åldersgrupp");
+                Console.WriteLine("Låten är i rätt tidsintervall ");
             }
             else
             {
-                Console.WriteLine("Du är för gammal");
+                Console.WriteLine("Låten är i fel tidsintervall");
             }
-            
+
         }
     }
 }
